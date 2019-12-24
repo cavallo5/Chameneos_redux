@@ -1,47 +1,47 @@
 package chameneos;
 
 public class Chameneos extends Thread{
-	private Mall mall;
+	private CentroCommerciale mall;
 	private IdChameneos id;
 	private Colore myColour, otherColour;
-	private int numeriviaggi;
-	public int contatore;
+	private int numeroviaggi;
+	public int contatoreviaggi;
 	 
-	public Chameneos(Mall m ,IdChameneos id , Colore c, int d) 
+	public Chameneos(CentroCommerciale m ,IdChameneos id , Colore c, int d) 
 	{
 		this.mall=m;
 		this.id=id; 
 		this.myColour=c;
-		this.numeriviaggi=d;
+		this.numeroviaggi=d;
 	}
-	private void Message(String Mess) 
+	private void Messaggio(String Mess) 
 	{
 		System.out. println ( "(" + id . toString () + ") Sono " +
 		myColour.toString () + " e " + Mess);
 	}
-	private void EatingHoneysuckleAndTraining()
+	private void Riposo()
 	{
-		Message("sono a casa");
+		Messaggio("sono a casa");
 	}
-	private void GoingToTheMall() 
+	private void Vadoalcentrocommerciale() 
 	{
-		Message("vado nel centro commerciale");
+		Messaggio("vado nel centro commerciale");
 	}
-	private void Mutating()
+	private void Mutazione()
 	{
-		this.otherColour = mall.Cooperation(id , myColour); 
-		Message("sto avendo una mutazione dopo aver incontrato un'altra creatura di colore "+otherColour);
-		this.myColour = myColour.ComplementaryColour(otherColour);
-		Message("torno a casa dopo aver fatto la mutazione");
+		this.otherColour = mall.Cooperazione(id , myColour); 
+		Messaggio("sto avendo una mutazione dopo aver incontrato un'altra creatura di colore "+otherColour);
+		this.myColour = myColour.Complementare(otherColour);
+		Messaggio("torno a casa dopo aver fatto la mutazione");
 	}
 public void run() {
-	contatore=0;
-	while(true && contatore<numeriviaggi) 
+	contatoreviaggi=0;
+	while(true && contatoreviaggi<numeroviaggi) 
 	{
-		EatingHoneysuckleAndTraining();
-		GoingToTheMall();
-		Mutating();
-		contatore++;
+		Riposo();
+		Vadoalcentrocommerciale();
+		Mutazione();
+		contatoreviaggi++;
 	}
 }
 

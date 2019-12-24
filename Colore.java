@@ -2,34 +2,34 @@ package chameneos;
 
 public class Colore
 {
-	public int internalColour;
+	public int colore_charmeneox;
 	
 	private static final int intblu = 0 ;
+	public static final Colore BLU = new Colore(intblu); 
 	private static final int introsso = 1 ;
+	public static final Colore ROSSO = new Colore(introsso);
 	private static final int intgiallo = 2; 
-	public static final Colore BLU = new Colore(intblu ); 
-	public static final Colore ROSSO = new Colore(introsso );
 	public static final Colore GIALLO = new Colore(intgiallo); 
 	
-	private Colore( int value ) 
+	private Colore(int valore) 
 	{
-		internalColour = value %3 ;
+		colore_charmeneox = valore %3 ;
 	}
 	
-	public Colore ComplementaryColour(Colore C) {
-		if ( internalColour == C. internalColour )
+	public Colore Complementare(Colore C) {
+		if ( colore_charmeneox == C. colore_charmeneox )
 		{ 
-			return new Colore(internalColour ); 
+			return new Colore(colore_charmeneox ); 
 		}
-		else return new Colore( 3 - internalColour - C.internalColour ); 
+		else return new Colore( 3 - colore_charmeneox - C.colore_charmeneox ); 
 	}
 	
 	public String toString (){
-		if ( internalColour == intblu )
+		if ( colore_charmeneox == intblu )
 		{
 			return "BLU";
 		}
-		else if ( internalColour == introsso ) 
+		else if ( colore_charmeneox == introsso ) 
 		{
 			return "ROSSO"; 
 		}
