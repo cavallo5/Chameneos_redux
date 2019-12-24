@@ -1,14 +1,14 @@
 package chameneos;
 
 public class Mall {
-	private Colour AColour,BColour;
+	private Colore AColour,BColour;
 	private Boolean FirstCall =true;
 	private boolean MustWait =false;
 
 
-	public synchronized Colour Cooperation(IdChameneos x ,Colour C)
+	public synchronized Colore Cooperation(IdChameneos x ,Colore C)
 	{
-		Colour result ;
+		Colore result ;
 		while(MustWait)
 		{
 			try

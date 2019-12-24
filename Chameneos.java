@@ -3,11 +3,11 @@ package chameneos;
 public class Chameneos extends Thread{
 	private Mall mall;
 	private IdChameneos id;
-	private Colour myColour, otherColour;
+	private Colore myColour, otherColour;
 	private int numeriviaggi;
-	public int contatore=0;
+	public int contatore;
 	 
-	public Chameneos(Mall m ,IdChameneos id , Colour c, int d) 
+	public Chameneos(Mall m ,IdChameneos id , Colore c, int d) 
 	{
 		this.mall=m;
 		this.id=id; 
@@ -29,13 +29,14 @@ public class Chameneos extends Thread{
 	}
 	private void Mutating()
 	{
-		Message("sto avendo una mutazione dopo aver incontrato un'altra creatura");
-		otherColour = mall.Cooperation(id , myColour); 
-		myColour = myColour.ComplementaryColour(otherColour);
-		Message("ho effettuato la mutazione, torno a casa");
+		this.otherColour = mall.Cooperation(id , myColour); 
+		Message("sto avendo una mutazione dopo aver incontrato un'altra creatura di colore "+otherColour);
+		this.myColour = myColour.ComplementaryColour(otherColour);
+		Message("torno a casa dopo aver fatto la mutazione");
 	}
 public void run() {
-	while(true && contatore<=numeriviaggi) 
+	contatore=0;
+	while(true && contatore<numeriviaggi) 
 	{
 		EatingHoneysuckleAndTraining();
 		GoingToTheMall();
