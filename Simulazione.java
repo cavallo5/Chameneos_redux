@@ -1,10 +1,9 @@
-package chameneos;
+package chameneos_redux;
 
-import chameneos.Chameneos;
+import chameneos_redux.Chameneos;
 
 public class Simulazione {
 static Colore [] Colori = {Colore.GIALLO,Colore.BLU,Colore.ROSSO};
-	
 static int c=6; //numero charmeneos
 static int numeroviaggi=4; //numero viaggi di ogni charmeneos
 static Chameneos[] GruppodiCharmeneos = new Chameneos[c];

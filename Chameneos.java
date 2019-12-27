@@ -1,9 +1,9 @@
-package chameneos;
+package chameneos_redux;
 
 public class Chameneos extends Thread{
 	private CentroCommerciale mall;
 	private IdChameneos id;
-	private Colore myColour, otherColour;
+	private Colore coloreA, coloreB;
 	private int numeroviaggi;
 	public int contatoreviaggi;
 	 
@@ -11,13 +11,13 @@ public class Chameneos extends Thread{
 	{
 		this.mall=m;
 		this.id=id; 
-		this.myColour=c;
+		this.coloreA=c;
 		this.numeroviaggi=d;
 	}
 	private void Messaggio(String Mess) 
 	{
 		System.out. println ( "(" + id . toString () + ") Sono " +
-		myColour.toString () + " e " + Mess);
+		coloreA.toString () + " e " + Mess);
 	}
 	private void Riposo()
 	{
@@ -29,9 +29,9 @@ public class Chameneos extends Thread{
 	}
 	private void Mutazione()
 	{
-		this.otherColour = mall.Cooperazione(id , myColour); 
-		Messaggio("sto avendo una mutazione dopo aver incontrato un'altra creatura di colore "+otherColour);
-		this.myColour = myColour.Complementare(otherColour);
+		this.coloreB = mall.Cooperazione(id , coloreA); 
+		Messaggio("sto avendo una mutazione dopo aver incontrato un'altra creatura di colore "+coloreB);
+		this.coloreA = coloreA.Complementare(coloreB);
 		Messaggio("torno a casa dopo aver fatto la mutazione");
 	}
 public void run() {

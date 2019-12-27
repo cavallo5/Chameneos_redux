@@ -1,4 +1,4 @@
-package chameneos;
+package chameneos_redux;
 
 public class IdChameneos {
 	private final int valore ;

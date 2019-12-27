@@ -1,4 +1,4 @@
-package chameneos;
+package chameneos_redux;
 
 public class CentroCommerciale {
 	private Colore ColoreA,ColoreB;
