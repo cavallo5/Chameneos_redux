@@ -3,7 +3,7 @@ package chameneos_redux;
 
 /**
  * Initiator 
- * @author Vincenzo Cavallo, Malamine Liviano D’Arcangelo Koumare
+ * @author Vincenzo
  */
 
 import chameneos_redux.Chameneos;
