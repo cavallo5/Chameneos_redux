@@ -2,7 +2,7 @@ package chameneos_redux;
 
 /**
  * IdChameneos per identificare gli chameneos
- * @author Vincenzo Cavallo, Malamine Liviano D’Arcangelo Koumare
+ * @author Vincenzo
  */
 
 public class IdChameneos {
